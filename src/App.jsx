@@ -31,7 +31,7 @@ const patientStories = [
     quote:
       "The team rebuilt my strength and confidence step by step. I am back to training without fear of re-injury.",
     image:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?auto=format&fit=crop&w=900&q=80",
   },
   {
     name: "Grace Njeri",
@@ -39,7 +39,7 @@ const patientStories = [
     quote:
       "My pain reduced significantly in just a few weeks, and now I know exactly how to manage posture and movement.",
     image:
-      "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
@@ -74,6 +74,9 @@ function App() {
   useEffect(() => {
     const delayScale = 0.48;
     const durationScale = 0.72;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const mobileMotion = window.matchMedia("(max-width: 960px), (pointer: coarse)").matches;
+    const enableHeavyMotion = !reduceMotion && !mobileMotion;
 
     document.body.classList.add("is-loading");
     document.documentElement.style.setProperty("--scroll-shift", "0px");
@@ -137,7 +140,11 @@ function App() {
     const sectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          entry.target.classList.toggle("is-active", entry.isIntersecting);
+          if (!entry.isIntersecting) {
+            return;
+          }
+          entry.target.classList.add("is-active");
+          sectionObserver.unobserve(entry.target);
         });
       },
       { threshold: 0.25, rootMargin: "-10% 0px -45% 0px" }
@@ -188,20 +195,33 @@ function App() {
 
     const handleParallax = () => {
       const y = window.scrollY * 0.18;
-      document.querySelectorAll(".hero-layer").forEach((layer, index) => {
-        const direction = index % 2 === 0 ? 1 : -1;
-        layer.style.transform = `translate3d(0, ${y * direction}px, 0)`;
-      });
 
-      photoParallax.forEach((photo, index) => {
-        const pace = 0.05 + index * 0.012;
-        photo.style.transform = `translate3d(0, ${y * pace}px, 0)`;
-      });
+      if (enableHeavyMotion) {
+        document.querySelectorAll(".hero-layer").forEach((layer, index) => {
+          const direction = index % 2 === 0 ? 1 : -1;
+          layer.style.transform = `translate3d(0, ${y * direction}px, 0)`;
+        });
 
-      parallaxBlocks.forEach((block, index) => {
-        const pace = 0.03 + index * 0.01;
-        block.style.transform = `translate3d(0, ${y * pace}px, 0)`;
-      });
+        photoParallax.forEach((photo, index) => {
+          const pace = 0.05 + index * 0.012;
+          photo.style.transform = `translate3d(0, ${y * pace}px, 0)`;
+        });
+
+        parallaxBlocks.forEach((block, index) => {
+          const pace = 0.03 + index * 0.01;
+          block.style.transform = `translate3d(0, ${y * pace}px, 0)`;
+        });
+      } else {
+        document.querySelectorAll(".hero-layer").forEach((layer) => {
+          layer.style.transform = "translate3d(0, 0, 0)";
+        });
+        photoParallax.forEach((photo) => {
+          photo.style.transform = "translate3d(0, 0, 0)";
+        });
+        parallaxBlocks.forEach((block) => {
+          block.style.transform = "translate3d(0, 0, 0)";
+        });
+      }
 
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
@@ -209,7 +229,9 @@ function App() {
         progressBar.style.width = `${Math.min(progress, 100)}%`;
       }
 
-      document.documentElement.style.setProperty("--scroll-shift", `${Math.min(window.scrollY * 0.06, 64)}px`);
+      if (enableHeavyMotion) {
+        document.documentElement.style.setProperty("--scroll-shift", `${Math.round(Math.min(window.scrollY * 0.06, 64))}px`);
+      }
     };
 
     const handleScrollFrame = () => {
@@ -265,6 +287,20 @@ function App() {
     };
 
     handleHeaderState();
+
+    if (!enableHeavyMotion) {
+      document.documentElement.style.setProperty("--scroll-shift", "0px");
+      document.querySelectorAll(".hero-layer").forEach((layer) => {
+        layer.style.transform = "translate3d(0, 0, 0)";
+      });
+      photoParallax.forEach((photo) => {
+        photo.style.transform = "translate3d(0, 0, 0)";
+      });
+      parallaxBlocks.forEach((block) => {
+        block.style.transform = "translate3d(0, 0, 0)";
+      });
+    }
+
     handleParallax();
     window.addEventListener("scroll", handleScrollFrame, { passive: true });
 
@@ -273,16 +309,20 @@ function App() {
     const navLinks = nav ? [...nav.querySelectorAll("a")] : [];
     navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
-    magneticBtn?.addEventListener("mousemove", handleMagneticMove);
-    magneticBtn?.addEventListener("mouseleave", resetMagnetic);
+    if (!reduceMotion && !mobileMotion) {
+      magneticBtn?.addEventListener("mousemove", handleMagneticMove);
+      magneticBtn?.addEventListener("mouseleave", resetMagnetic);
+    }
 
-    const cardHandlers = [...motionCards].map((card) => {
-      const move = createCardMoveHandler(card);
-      const leave = resetCard(card);
-      card.addEventListener("mousemove", move);
-      card.addEventListener("mouseleave", leave);
-      return { card, move, leave };
-    });
+    const cardHandlers = !reduceMotion && !mobileMotion
+      ? [...motionCards].map((card) => {
+          const move = createCardMoveHandler(card);
+          const leave = resetCard(card);
+          card.addEventListener("mousemove", move);
+          card.addEventListener("mouseleave", leave);
+          return { card, move, leave };
+        })
+      : [];
 
     return () => {
       window.clearTimeout(pageReady);
@@ -513,7 +553,7 @@ function App() {
             <div className="gallery-grid reveal-stagger">
               {careGallery.map((item) => (
                 <article className="gallery-card" key={item.title}>
-                  <img src={item.image} alt={item.title} loading="lazy" onError={handleImageError} data-parallax="true" />
+                  <img src={item.image} alt={item.title} loading="lazy" onError={handleImageError} />
                   <div className="gallery-card-overlay">
                     <h3>{item.title}</h3>
                   </div>
@@ -530,7 +570,7 @@ function App() {
             <div className="story-grid reveal-stagger" data-delay="290" data-stagger="145" data-stagger-max="680">
               {patientStories.map((story) => (
                 <article className="story-card" key={story.name} data-duration="940">
-                  <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} data-parallax="true" />
+                  <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} />
                   <div className="story-content">
                     <p className="story-title">{story.title}</p>
                     <p className="story-quote">“{story.quote}”</p>

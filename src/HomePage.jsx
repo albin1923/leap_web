@@ -421,9 +421,7 @@ function HomePage() {
             <Link to="/centres">Centres</Link>
             <Link to="/careers">Careers</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/contact" className="btn btn-nav">
-              Book Consultation
-            </Link>
+            <a href="mailto:contact@leapphysiotherapy.in?subject=Consultation Enquiry" className="btn btn-nav">Book Consultation</a>
           </nav>
         </div>
       </header>
@@ -449,9 +447,7 @@ function HomePage() {
                 </p>
 
                 <div className="hero-actions reveal reveal-up" data-delay="520" data-duration="920">
-                  <Link to="/contact" className="btn btn-primary magnetic">
-                    Contact Us
-                  </Link>
+                  <a href="mailto:contact@leapphysiotherapy.in?subject=Consultation Enquiry" className="btn btn-primary magnetic">Contact Us</a>
                   <a href="#services" className="btn btn-ghost">
                     Explore Services
                   </a>
@@ -676,14 +672,14 @@ function HomePage() {
         <section className="section location-map flow-section" id="location">
           <div className="container location-wrap">
             <div className="location-copy reveal reveal-left" data-delay="80" data-duration="860">
-              <p className="eyebrow">Visit Our Clinic</p>
-              <h2 className="section-title">Find LEAP On The Map</h2>
+              <p className="eyebrow">Our Centres</p>
+              <h2 className="section-title">Find LEAP Centers</h2>
               <p>
-                Plan your visit easily. Tap below to open directions and reach our clinic without hassle.
+                Explore our various clinics near you. Find contact information, directions, and the right care center for your needs.
               </p>
-              <a href={googleDirectionsUrl} target="_blank" rel="noreferrer" className="btn btn-primary">
-                Get Directions
-              </a>
+              <Link to="/centres" className="btn btn-primary">
+                View All Centres
+              </Link>
             </div>
 
             <div className="location-frame reveal reveal-up" data-delay="140" data-duration="900">

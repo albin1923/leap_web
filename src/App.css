@@ -145,8 +145,8 @@ body.is-ready .page-veil span:last-child {
 }
 
 .brand img {
-  width: 58px;
-  height: 58px;
+  width: auto;
+  height: auto;
 }
 
 .brand-main {
@@ -1449,8 +1449,8 @@ body.is-ready .headline-accent {
   }
 
   .brand img {
-    width: 48px;
-    height: 48px;
+    width: auto;
+    height: auto;
   }
 
   .brand-main {

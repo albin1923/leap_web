@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -86,7 +86,25 @@ const handleImageError = (event) => {
   img.src = "/assets/rehab-fallback.svg";
 };
 
+
+const heroImages = [
+  "/images/DSCF3043.jpg",
+  "/images/DSCF3056.jpg",
+  "/images/DSCF3061.jpg",
+  "/images/DSCF3069.jpg",
+  "/images/DSCF3083.jpg",
+  "/images/DSCF3222.jpg"
+];
+
 function HomePage() {
+  const [heroImgIndex, setHeroImgIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroImgIndex((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const googleReviewUrl =
     import.meta.env.VITE_GOOGLE_REVIEW_URL || "https://www.google.com/search?q=LEAP+physiotherapy+google+reviews";
   const googleMapEmbedUrl =
@@ -387,10 +405,7 @@ function HomePage() {
         <div className="container nav-wrap">
           <a href="#top" className="brand" aria-label="LEAP home">
             <img src="/leap_logo.png" alt="LEAP logo mark" />
-            <div className="brand-copy">
-              <p className="brand-main">LEAP</p>
-              <p className="brand-sub">BY CASSAMARY</p>
-            </div>
+            
           </a>
 
           <button className="menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
@@ -462,8 +477,24 @@ function HomePage() {
                 </div>
               </div>
 
-              <div className="hero-visual reveal reveal-up" aria-hidden="true" data-parallax-block="true" data-delay="280" data-duration="1200">
-                <div className="hero-glow loop-float"></div>
+              <div className="hero-visual reveal reveal-up" aria-hidden="true" data-parallax-block="true" data-delay="280" data-duration="1200" style={{ position: 'relative', overflow: 'hidden', borderRadius: '12px', minHeight: '400px', width: '100%' }}>
+                {heroImages.map((src, idx) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt="Hero Slide"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      opacity: heroImgIndex === idx ? 1 : 0,
+                      transition: 'opacity 1s ease-in-out'
+                    }}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -603,7 +634,9 @@ function HomePage() {
                 <article className="story-card" key={story.name} data-duration="940">
                   <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} />
                   <div className="story-content">
+                    <p className="story-title">{story.title}</p>
                     <p className="story-quote">“{story.quote}”</p>
+                    <p className="story-name">{story.name}</p>
                   </div>
                 </article>
               ))}
@@ -616,7 +649,7 @@ function HomePage() {
             <div className="reviews-header reveal reveal-left" data-delay="80" data-duration="860">
               <p className="eyebrow">Client Reviews</p>
               <h2 className="section-title">Share Your Recovery Experience</h2>
-              <p>Your feedback helps future clients understand how LEAP supports real recovery journeys.</p>
+              
             </div>
 
             <div className="review-form reveal reveal-up" data-delay="130" data-duration="880">

@@ -12,11 +12,8 @@ function CareersPage() {
       <header className="site-header is-scrolled" id="top">
         <div className="container nav-wrap">
           <Link to="/" className="brand" aria-label="LEAP home">
-            <img src="/logo only print.jpg" alt="LEAP logo mark" />
-            <div className="brand-copy">
-              <p className="brand-main">LEAP</p>
-              <p className="brand-sub">BY CASSAMARY</p>
-            </div>
+            <img src="/leap_logo.png" alt="LEAP logo mark" />
+            
           </Link>
 
           <nav className="main-nav" aria-label="Main">

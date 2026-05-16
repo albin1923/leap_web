@@ -13,10 +13,7 @@ function CentresPage() {
         <div className="container nav-wrap">
           <Link to="/" className="brand" aria-label="LEAP home">
             <img src="/leap_logo.png" alt="LEAP logo mark" />
-            <div className="brand-copy">
-              <p className="brand-main">LEAP</p>
-              <p className="brand-sub">BY CASSAMARY</p>
-            </div>
+            
           </Link>
 
           <nav className="main-nav" aria-label="Main">

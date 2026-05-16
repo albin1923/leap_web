@@ -145,7 +145,7 @@ body.is-ready .page-veil span:last-child {
 }
 
 .brand img {
-  height: 58px;
+  height: 72px;
   width: auto;
   object-fit: contain;
 }
@@ -1450,7 +1450,7 @@ body.is-ready .headline-accent {
   }
 
   .brand img {
-    height: 48px;
+    height: 58px;
     width: auto;
     object-fit: contain;
   }

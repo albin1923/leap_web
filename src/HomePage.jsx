@@ -418,6 +418,8 @@ function HomePage() {
             <a href="#services">Services</a>
             <a href="#about">About</a>
             <a href="#approach">Approach</a>
+            <Link to="/centres">Centres</Link>
+            <Link to="/careers">Careers</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/contact" className="btn btn-nav">
               Book Consultation
@@ -632,7 +634,7 @@ function HomePage() {
             <div className="story-grid reveal-stagger" data-delay="290" data-stagger="145" data-stagger-max="680">
               {clientStories.map((story) => (
                 <article className="story-card" key={story.name} data-duration="940">
-                  <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} style={{ objectPosition: story.image.includes('3139') ? 'center 15%' : 'center' }} />
+                  <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} style={{ objectPosition: story.image.includes('3139') ? 'center 85%' : 'center' }} />
                   <div className="story-content">
                     <p className="story-title">{story.title}</p>
                   </div>

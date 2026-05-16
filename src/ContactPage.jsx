@@ -20,7 +20,8 @@ function ContactPage() {
             <Link to="/">Home</Link>
             <a href="/#services">Services</a>
             <a href="/#about">About</a>
-            <a href="/#approach">Approach</a>
+            <Link to="/centres">Centres</Link>
+            <Link to="/careers">Careers</Link>
             <Link to="/contact">Contact</Link>
           </nav>
         </div>

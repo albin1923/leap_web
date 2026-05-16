@@ -12,7 +12,7 @@ function ContactPage() {
       <header className="site-header is-scrolled" id="top">
         <div className="container nav-wrap">
           <Link to="/" className="brand" aria-label="LEAP home">
-            <img src="/assets/leap-mark.svg" alt="LEAP logo mark" />
+            <img src="/leap_logo.png" alt="LEAP logo mark" />
             <div className="brand-copy">
               <p className="brand-main">LEAP</p>
               <p className="brand-sub">BY CASSAMARY</p>
@@ -49,7 +49,19 @@ function ContactPage() {
               </div>
             </div>
 
-            <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+            <form 
+              className="contact-form" 
+              onSubmit={(event) => {
+                event.preventDefault();
+                const formData = new FormData(event.target);
+                const name = formData.get('name');
+                const phone = formData.get('phone');
+                const service = formData.get('service');
+                const message = formData.get('message');
+                const text = `New Consultation Request:%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
+                window.location.href = `mailto:contact@leapphysiotherapy.in?subject=Consultation Request - ${name}&body=${text}`;
+              }}
+            >
               <h2>Request a Consultation</h2>
               <label htmlFor="name">Full name</label>
               <input id="name" name="name" type="text" placeholder="Enter your name" required />

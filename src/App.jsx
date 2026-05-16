@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import ContactPage from "./ContactPage";
 import HomePage from "./HomePage";
+import CareersPage from "./CareersPage";
+import CentresPage from "./CentresPage";
 
 function ScrollToTopOnRouteChange() {
   const { pathname } = useLocation();
@@ -20,6 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/centres" element={<CentresPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

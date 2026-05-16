@@ -17,14 +17,14 @@ const services = [
   "Online Consultations Available",
 ];
 
-const patientStories = [
+const clientStories = [
   {
     name: "Amina Joseph",
     title: "Post-Surgery Knee Recovery",
     quote:
       "I returned to work and daily walking much faster than expected. The care plan felt personal and practical from day one.",
     image:
-      "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80",
+      "/images/DSCF3139.jpg",
   },
   {
     name: "David Mensah",
@@ -32,7 +32,7 @@ const patientStories = [
     quote:
       "The team rebuilt my strength and confidence step by step. I am back to training without fear of re-injury.",
     image:
-      "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?auto=format&fit=crop&w=900&q=80",
+      "/images/DSCF3172.jpg",
   },
   {
     name: "Grace Njeri",
@@ -40,7 +40,7 @@ const patientStories = [
     quote:
       "My pain reduced significantly in just a few weeks, and now I know exactly how to manage posture and movement.",
     image:
-      "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=900&q=80",
+      "/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM.jpeg",
   },
 ];
 
@@ -48,12 +48,12 @@ const careGallery = [
   {
     title: "One-on-One Guided Therapy",
     image:
-      "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?auto=format&fit=crop&w=1200&q=80",
+      "/images/DSCF3186.jpg",
   },
   {
     title: "Mobility and Strength Sessions",
     image:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1200&q=80",
+      "/images/DSCF3161.jpg",
   },
   {
     title: "Compassionate Senior Care",
@@ -386,7 +386,7 @@ function HomePage() {
       <header className="site-header" id="top">
         <div className="container nav-wrap">
           <a href="#top" className="brand" aria-label="LEAP home">
-            <img src="/assets/leap-mark.svg" alt="LEAP logo mark" />
+            <img src="/leap_logo.png" alt="LEAP logo mark" />
             <div className="brand-copy">
               <p className="brand-main">LEAP</p>
               <p className="brand-sub">BY CASSAMARY</p>
@@ -457,7 +457,7 @@ function HomePage() {
                     <p className="stat-number" data-counter="96">
                       0
                     </p>
-                    <p className="stat-label">Patient Satisfaction %</p>
+                    <p className="stat-label">Client Satisfaction %</p>
                   </article>
                 </div>
               </div>
@@ -487,8 +487,8 @@ function HomePage() {
 
             <div className="spotlight-image reveal reveal-up" data-delay="180" data-duration="860">
               <img
-                src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=1200&q=80"
-                alt="Physiotherapist assisting a dark-skinned patient during upper-limb rehabilitation"
+                src="/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM.jpeg"
+                alt="Physiotherapist assisting a dark-skinned client during upper-limb rehabilitation"
                 loading="lazy"
                 onError={handleImageError}
                 data-parallax="true"
@@ -595,17 +595,15 @@ function HomePage() {
 
         <section className="section stories flow-section motion-stories" id="stories">
           <div className="container">
-            <p className="eyebrow reveal reveal-left" data-delay="130" data-duration="820">Patient Stories</p>
+            <p className="eyebrow reveal reveal-left" data-delay="130" data-duration="820">Client Stories</p>
             <h2 className="section-title reveal reveal-up" data-delay="220" data-duration="980">Real Progress, Real Confidence</h2>
             <p className="swipe-hint" aria-hidden="true">Swipe left to view more stories</p>
             <div className="story-grid reveal-stagger" data-delay="290" data-stagger="145" data-stagger-max="680">
-              {patientStories.map((story) => (
+              {clientStories.map((story) => (
                 <article className="story-card" key={story.name} data-duration="940">
                   <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} />
                   <div className="story-content">
-                    <p className="story-title">{story.title}</p>
                     <p className="story-quote">“{story.quote}”</p>
-                    <p className="story-name">{story.name}</p>
                   </div>
                 </article>
               ))}
@@ -616,9 +614,9 @@ function HomePage() {
         <section className="section reviews flow-section" id="reviews">
           <div className="container reviews-wrap">
             <div className="reviews-header reveal reveal-left" data-delay="80" data-duration="860">
-              <p className="eyebrow">Patient Reviews</p>
+              <p className="eyebrow">Client Reviews</p>
               <h2 className="section-title">Share Your Recovery Experience</h2>
-              <p>Your feedback helps future patients understand how LEAP supports real recovery journeys.</p>
+              <p>Your feedback helps future clients understand how LEAP supports real recovery journeys.</p>
             </div>
 
             <div className="review-form reveal reveal-up" data-delay="130" data-duration="880">

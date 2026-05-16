@@ -1624,8 +1624,8 @@ body.is-ready .headline-accent {
     width: 100%;
   }
   .hero-copy {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
     padding: 8rem 4rem 4rem 8vw !important;
     display: flex;
     flex-direction: column;
@@ -1633,16 +1633,16 @@ body.is-ready .headline-accent {
     align-items: flex-start;
   }
   .hero-visual {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
+    flex: 0 0 55% !important;
+    max-width: 55% !important;
     position: relative !important;
     height: auto !important;
     min-height: 100vh !important;
     margin: 0 !important;
     padding: 0 !important;
     border-radius: 0 !important;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 120,0 C 300,250 0,500 120,750 C 180,875 80,950 140,1000 L 500,1000 L 500,0 Z' fill='black'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 120,0 C 300,250 0,500 120,750 C 180,875 80,950 140,1000 L 500,1000 L 500,0 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 40,0 C 180,350 0,650 40,1000 L 1000,1000 L 1000,0 Z' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 40,0 C 180,350 0,650 40,1000 L 1000,1000 L 1000,0 Z' fill='black'/%3E%3C/svg%3E");
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
@@ -1658,7 +1658,7 @@ body.is-ready .headline-accent {
     height: 100%;
     z-index: 2;
     pointer-events: none;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 120,0 C 300,250 0,500 120,750 C 180,875 80,950 140,1000' fill='none' stroke='%2380c92b' stroke-width='6'/%3E%3C/svg%3E") no-repeat;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 40,0 C 180,350 0,650 40,1000' fill='none' stroke='%2380c92b' stroke-width='8'/%3E%3C/svg%3E") no-repeat;
     background-size: 100% 100%;
   }
   .hero-visual img {

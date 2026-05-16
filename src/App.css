@@ -1641,7 +1641,8 @@ body.is-ready .headline-accent {
     margin: 0 !important;
     padding: 0 !important;
     border-radius: 0 !important;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1000 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M 200,0 C 400,300 -100,700 200,1000 L 1000,1000 L 1000,0 Z" fill="black" /></svg>');
+    mask-size: 100% 100%;
     mask-image: linear-gradient(to right, transparent 0%, black 15%);
   }
   .hero-visual img {

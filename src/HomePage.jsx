@@ -481,6 +481,8 @@ function HomePage() {
                     key={src}
                     src={src}
                     alt="Hero Slide"
+                    fetchpriority={idx === 0 ? "high" : "low"}
+                    loading={idx === 0 ? "eager" : "lazy"}
                     style={{
                       position: 'absolute',
                       top: 0,
@@ -489,6 +491,7 @@ function HomePage() {
                       height: '100%',
                       objectFit: 'cover',
                       opacity: heroImgIndex === idx ? 1 : 0,
+                      
                       transition: 'opacity 1s ease-in-out'
                     }}
                   />

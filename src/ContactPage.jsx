@@ -1,6 +1,32 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function ContactPage() {
+  useEffect(() => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".main-nav");
+
+    const handleMenuClick = () => {
+      const isExpanded = menuToggle?.getAttribute("aria-expanded") === "true";
+      menuToggle?.setAttribute("aria-expanded", String(!isExpanded));
+      nav?.classList.toggle("open");
+    };
+
+    const closeMenu = () => {
+      nav?.classList.remove("open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+    };
+
+    menuToggle?.addEventListener("click", handleMenuClick);
+    const navLinks = nav ? [...nav.querySelectorAll("a")] : [];
+    navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+    return () => {
+      menuToggle?.removeEventListener("click", handleMenuClick);
+      navLinks.forEach((link) => link.removeEventListener("click", closeMenu));
+    };
+  }, []);
+
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -16,6 +42,11 @@ function ContactPage() {
             
           </Link>
 
+          <button className="menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <nav className="main-nav" aria-label="Main">
             <Link to="/">Home</Link>
             <a href="/#services">Services</a>

@@ -1568,42 +1568,9 @@ body.is-ready .headline-accent {
   }
 }
 
-@media (min-width: 960px) {
-  .hero-visual {
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
-    mask-image: linear-gradient(to right, transparent 0%, black 30%);
-    border-radius: 0 !important;
-  }
-}
 
-@media (min-width: 960px) {
-  .hero {
-    padding-bottom: 0;
-  }
-  .hero-grid {
-    display: block !important;
-  }
-  .hero-copy {
-    width: 50% !important;
-    max-width: 50% !important;
-    padding-bottom: 4rem;
-  }
-  .hero-visual {
-    position: absolute !important;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 50% !important;
-    height: 100% !important;
-    min-height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-  }
-  .hero-visual img {
-    border-radius: 0 !important;
-  }
-}
+
+
 
 @media (max-width: 960px) {
   .menu-toggle {
@@ -1634,5 +1601,51 @@ body.is-ready .headline-accent {
   
   .brand img {
     max-width: 65vw;
+  }
+}
+
+@media (min-width: 960px) {
+  .hero {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    min-height: 100vh !important;
+    display: flex;
+    align-items: stretch;
+  }
+  .hero-content {
+    width: 100% !important;
+    display: flex;
+  }
+  .hero-grid {
+    display: flex !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+  }
+  .hero-copy {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 8rem 4rem 4rem 8vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .hero-visual {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%);
+  }
+  .hero-visual img {
+    border-radius: 0 !important;
+    height: 100% !important;
   }
 }

@@ -24,7 +24,7 @@ const clientStories = [
     quote:
       "I returned to work and daily walking much faster than expected. The care plan felt personal and practical from day one.",
     image:
-      "/images/DSCF3139.jpg",
+      "/images/DSCF3139_edited.jpg",
   },
   {
     name: "David Mensah",
@@ -32,7 +32,7 @@ const clientStories = [
     quote:
       "The team rebuilt my strength and confidence step by step. I am back to training without fear of re-injury.",
     image:
-      "/images/DSCF3172.jpg",
+      "/images/DSCF3172_edited.jpg",
   },
   {
     name: "Grace Njeri",
@@ -40,7 +40,7 @@ const clientStories = [
     quote:
       "My pain reduced significantly in just a few weeks and now I know exactly how to manage posture and movement.",
     image:
-      "/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM.jpeg",
+      "/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM_edited.jpeg",
   },
 ];
 
@@ -48,12 +48,12 @@ const careGallery = [
   {
     title: "One-on-One Guided Therapy",
     image:
-      "/images/DSCF3186.jpg",
+      "/images/DSCF3186_edited.jpg",
   },
   {
     title: "Mobility and Strength Sessions",
     image:
-      "/images/DSCF3161.jpg",
+      "/images/DSCF3161_edited.jpg",
   },
   {
     title: "Compassionate Senior Care",
@@ -88,18 +88,18 @@ const handleImageError = (event) => {
 
 
 const heroImages = [
-  "/images/DSCF3043.jpg",
-  "/images/DSCF3056.jpg",
-  "/images/DSCF3061.jpg",
-  "/images/DSCF3069.jpg",
-  "/images/DSCF3083.jpg",
-  "/images/DSCF3139.jpg",
-  "/images/DSCF3161.jpg",
-  "/images/DSCF3172.jpg",
-  "/images/DSCF3186.jpg",
-  "/images/DSCF3222.jpg",
+  "/images/DSCF3043_edited.jpg",
+  "/images/DSCF3056_edited.jpg",
+  "/images/DSCF3061_edited.jpg",
+  "/images/DSCF3069_edited.jpg",
+  "/images/DSCF3083_edited.jpg",
+  "/images/DSCF3139_edited.jpg",
+  "/images/DSCF3161_edited.jpg",
+  "/images/DSCF3172_edited.jpg",
+  "/images/DSCF3186_edited.jpg",
+  "/images/DSCF3222_edited.jpg",
   "/images/DSCF3249%20.jpg",
-  "/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM.jpeg"
+  "/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM_edited.jpeg"
 ];
 
 function HomePage() {
@@ -525,7 +525,7 @@ function HomePage() {
 
             <div className="spotlight-image reveal reveal-up" data-delay="180" data-duration="860">
               <img
-                src="/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM.jpeg"
+                src="/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM_edited.jpeg"
                 alt="Physiotherapist assisting a dark-skinned client during upper-limb rehabilitation"
                 loading="lazy"
                 onError={handleImageError}
@@ -639,7 +639,7 @@ function HomePage() {
             <div className="story-grid reveal-stagger" data-delay="290" data-stagger="145" data-stagger-max="680">
               {clientStories.map((story) => (
                 <article className="story-card" key={story.name} data-duration="940">
-                  <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} style={{ objectPosition: story.image.includes('3139') ? 'center 85%' : 'center' }} />
+                  <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} style={{ objectPosition: story.image.includes('3139') ? 'center 20%' : 'center' }} />
                   <div className="story-content">
                     <p className="story-title">{story.title}</p>
                   </div>

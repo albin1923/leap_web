@@ -178,7 +178,7 @@ body.is-ready .page-veil span:last-child {
 }
 
 .main-nav a:hover {
-  color: var(--green);
+  color: black;
 }
 
 .menu-toggle {
@@ -1343,6 +1343,11 @@ body.is-ready .headline-accent {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1000;
+  }
+  
+  .menu-toggle span {
+    background: var(--turquoise);
   }
 
   .main-nav {

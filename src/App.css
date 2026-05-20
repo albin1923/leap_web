@@ -219,8 +219,12 @@ body.is-ready .page-veil span:last-child {
 .btn-primary,
 .btn-nav {
   background: linear-gradient(90deg, var(--green), #8dde2b);
-  color: #03343f;
+  color: black;
   box-shadow: 0 10px 22px rgba(128, 201, 43, 0.36);
+}
+
+.main-nav a.btn-nav {
+  color: black;
 }
 
 .btn-primary {

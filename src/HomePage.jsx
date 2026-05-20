@@ -682,7 +682,7 @@ function HomePage() {
           <div className="container location-wrap">
             <div className="location-copy reveal reveal-left" data-delay="80" data-duration="860">
               <p className="eyebrow">Our Centres</p>
-              <h2 className="section-title">Find LEAP Centers</h2>
+              
               <p>
                 Explore our various clinics near you. Find contact information, directions and the right care center for your needs.
               </p>

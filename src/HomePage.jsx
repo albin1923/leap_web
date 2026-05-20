@@ -639,7 +639,7 @@ function HomePage() {
             <div className="story-grid reveal-stagger" data-delay="290" data-stagger="145" data-stagger-max="680">
               {clientStories.map((story) => (
                 <article className="story-card" key={story.name} data-duration="940">
-                  <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} style={{ objectPosition: story.image.includes('3139') ? 'center 50%' : 'center' }} />
+                  <img src={story.image} alt={story.name} loading="lazy" onError={handleImageError} style={{ objectPosition: story.image.includes('3139') ? 'center 45%' : 'center' }} />
                   <div className="story-content">
                     <p className="story-title">{story.title}</p>
                   </div>

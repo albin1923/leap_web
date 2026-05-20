@@ -75,7 +75,7 @@ function CareersPage() {
             <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
               <div className="career-card" style={{ padding: '2rem', background: 'var(--surface-sunken)', borderRadius: '12px', marginBottom: '2rem' }}>
                 <h2>Join a Team of Experts</h2>
-                <p>We are always eager to meet dedicated, compassionate, and skilled professionals who want to make a difference in people's lives. Even if there are no immediate openings, we are constantly growing and often look to our talent pool when an opportunity arises.</p>
+                <p>We are always eager to meet dedicated, compassionate and skilled professionals who want to make a difference in people's lives. Even if there are no immediate openings, we are constantly growing and often look to our talent pool when an opportunity arises.</p>
               </div>
 
               <div className="career-card" style={{ padding: '2rem', background: 'var(--surface-sunken)', borderRadius: '12px', marginBottom: '2rem' }}>

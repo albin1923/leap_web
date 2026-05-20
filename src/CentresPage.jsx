@@ -62,11 +62,7 @@ function CentresPage() {
         <section className="section contact-page-hero">
           <div className="container contact-page-wrap">
             <div className="contact-page-copy">
-              <p className="eyebrow">Our Locations</p>
               <h1>Our Centres</h1>
-              <p>
-                Find a LEAP Physiotherapy clinic near you.
-              </p>
             </div>
 
             <div className="centres-grid" style={{ display: 'grid', gap: '2rem', marginTop: '3rem' }}>
@@ -75,7 +71,7 @@ function CentresPage() {
                 <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div>
                     <strong>Address:</strong>
-                    <p>Building No. 1, Level 1, Kakkodi, Kerala</p>
+                    <p>LEAP BY CASSAMARY, Building No. 1, Level 1, Kakkodi, <u>Kottayam</u>, Kerala</p>
                   </div>
                   <div>
                     <strong>Contact:</strong>

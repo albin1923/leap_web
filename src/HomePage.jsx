@@ -38,7 +38,7 @@ const clientStories = [
     name: "Grace Njeri",
     title: "Chronic Back Pain Management",
     quote:
-      "My pain reduced significantly in just a few weeks, and now I know exactly how to manage posture and movement.",
+      "My pain reduced significantly in just a few weeks and now I know exactly how to manage posture and movement.",
     image:
       "/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM.jpeg",
   },
@@ -93,7 +93,13 @@ const heroImages = [
   "/images/DSCF3061.jpg",
   "/images/DSCF3069.jpg",
   "/images/DSCF3083.jpg",
-  "/images/DSCF3222.jpg"
+  "/images/DSCF3139.jpg",
+  "/images/DSCF3161.jpg",
+  "/images/DSCF3172.jpg",
+  "/images/DSCF3186.jpg",
+  "/images/DSCF3222.jpg",
+  "/images/DSCF3249%20.jpg",
+  "/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM.jpeg"
 ];
 
 function HomePage() {
@@ -443,7 +449,7 @@ function HomePage() {
                 </h1>
                 <p className="lead reveal reveal-up" data-delay="380" data-duration="1020">
                   At LEAP, we believe in healing through movement. Our expert physiotherapists help you
-                  recover safely, rebuild strength, and return to what you love.
+                  recover safely, rebuild strength and return to what you love.
                 </p>
 
                 <div className="hero-actions reveal reveal-up" data-delay="520" data-duration="920">
@@ -508,7 +514,7 @@ function HomePage() {
               <h2>Personalized Physiotherapy For Every Stage of Recovery</h2>
               <p>
                 From post-injury rehabilitation to long-term mobility support, LEAP delivers treatment
-                plans that are clinically sound, culturally empathetic, and built around your real life.
+                plans that are clinically sound, culturally empathetic and built around your real life.
               </p>
               <ul className="check-list">
                 <li>Individual attention in every session</li>
@@ -536,7 +542,7 @@ function HomePage() {
               <h2>Move Free. Live Strong.</h2>
               <p>
                 We blend evidence-based physiotherapy with a highly personal care model. Every
-                recovery plan is built around your mobility goals, lifestyle, and long-term function.
+                recovery plan is built around your mobility goals, lifestyle and long-term function.
               </p>
               <ul className="check-list">
                 <li>One-on-one expert physiotherapist guidance</li>
@@ -583,7 +589,7 @@ function HomePage() {
               <p className="eyebrow">Our Approach</p>
               <h2>Healing Through Movement</h2>
               <p>
-                A modern physiotherapy experience designed to feel calm, precise, and motivating.
+                A modern physiotherapy experience designed to feel calm, precise and motivating.
                 From pain relief to full function, we guide each stage with clinical clarity and care.
               </p>
             </div>
@@ -592,7 +598,7 @@ function HomePage() {
               <article className="step">
                 <span>01</span>
                 <h3>Consult & Evaluate</h3>
-                <p>Detailed history, physical exam, and functional baseline.</p>
+                <p>Detailed history, physical exam and functional baseline.</p>
               </article>
               <article className="step">
                 <span>02</span>
@@ -602,7 +608,7 @@ function HomePage() {
               <article className="step">
                 <span>03</span>
                 <h3>Train & Sustain</h3>
-                <p>Strength, mobility, and ergonomic education for lasting outcomes.</p>
+                <p>Strength, mobility and ergonomic education for lasting outcomes.</p>
               </article>
             </div>
           </div>
@@ -678,7 +684,7 @@ function HomePage() {
               <p className="eyebrow">Our Centres</p>
               <h2 className="section-title">Find LEAP Centers</h2>
               <p>
-                Explore our various clinics near you. Find contact information, directions, and the right care center for your needs.
+                Explore our various clinics near you. Find contact information, directions and the right care center for your needs.
               </p>
               <Link to="/centres" className="btn btn-primary">
                 View All Centres

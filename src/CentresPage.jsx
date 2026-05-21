@@ -67,11 +67,11 @@ function CentresPage() {
 
             <div className="centres-grid" style={{ display: 'grid', gap: '2rem', marginTop: '3rem' }}>
               <div className="centre-card" style={{ padding: '2rem', background: 'var(--surface-sunken)', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
-                <h2><u>Kottayam</u><br/>LEAP BY CASSAMARY</h2>
+                <h2><u>Kottayam</u> LEAP BY CASSAMARY</h2>
                 <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div>
                     <strong>Address:</strong>
-                    <p>LEAP BY CASSAMARY, Building No. 1, Level 1, Kakkodi, <u>Kottayam</u>, Kerala</p>
+                    <p><u>Kottayam</u><br/>LEAP BY CASSAMARY, Building No. 1, Level 1, Kakkodi, Kerala</p>
                   </div>
                   <div>
                     <strong>Contact:</strong>

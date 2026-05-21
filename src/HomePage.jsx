@@ -449,7 +449,7 @@ function HomePage() {
                 </h1>
                 <p className="lead reveal reveal-up" data-delay="380" data-duration="1020">
                   At LEAP, we believe in healing through movement. Our expert physiotherapists help you
-                  recover safely, rebuild strength and return to what you love.
+                  recover safely, rebuild strength and return to activities you love.
                 </p>
 
                 <div className="hero-actions reveal reveal-up" data-delay="520" data-duration="920">

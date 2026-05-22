@@ -1682,3 +1682,16 @@ body.is-ready .headline-accent {
     height: 100% !important;
   }
 }
+
+.centre-title-sub {
+  display: inline;
+}
+
+@media (max-width: 760px) {
+  .centre-title-sub {
+    display: block;
+    white-space: nowrap;
+    margin-top: 0.25rem;
+  }
+}
+

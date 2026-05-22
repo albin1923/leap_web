@@ -67,7 +67,7 @@ function CentresPage() {
 
             <div className="centres-grid" style={{ display: 'grid', gap: '2rem', marginTop: '3rem' }}>
               <div className="centre-card" style={{ padding: '2rem', background: 'var(--surface-sunken)', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
-                <h2><u>Kottayam</u> LEAP BY CASSAMARY</h2>
+                <h2><u>Kottayam</u> <span className="centre-title-sub">LEAP BY CASSAMARY</span></h2>
                 <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div>
                     <strong>Address:</strong>

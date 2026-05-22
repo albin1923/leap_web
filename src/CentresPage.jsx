@@ -71,7 +71,7 @@ function CentresPage() {
                 <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div>
                     <strong>Address:</strong>
-                    <p><u>Kottayam</u><br/>LEAP BY CASSAMARY, Building No. 1, Level 1, Kakkodi, Kerala</p>
+                    <p><u>Kottayam</u><br/>LEAP BY CASSAMARY, Vartha Nagar, behind Skyline Pearl, Kanjikuzhi, Kottayam, Kerala 686</p>
                   </div>
                   <div>
                     <strong>Contact:</strong>

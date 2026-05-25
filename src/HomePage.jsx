@@ -226,7 +226,8 @@ function HomePage() {
             const progress = Math.min((time - start) / duration, 1);
             const eased = 1 - (1 - progress) ** 3;
             const value = Math.floor(target * eased);
-            el.textContent = target > 100 ? `${value}+` : `${value}%`;
+            let suffix = target === 96 ? "%" : "+";
+            el.textContent = `${value}${suffix}`;
 
             if (progress < 1) {
               requestAnimationFrame(animate);

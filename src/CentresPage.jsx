@@ -71,7 +71,7 @@ function CentresPage() {
                 <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div>
                     <strong>Address:</strong>
-                    <p><u>Kottayam</u><br/>LEAP BY CASSAMARY, Vartha Nagar, behind Skyline Pearl, Kanjikuzhi, Kottayam, Kerala 686</p>
+                    <p>Vartha Nagar, Behind Skyline Pearl, Kanjikuzhi, Kottayam, Kerala 686</p>
                   </div>
                   <div>
                     <strong>Contact:</strong>

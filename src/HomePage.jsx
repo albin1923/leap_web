@@ -98,7 +98,8 @@ const heroImages = [
   "/images/DSCF3172_edited.jpg",
   "/images/DSCF3186_edited.jpg",
   "/images/DSCF3222_edited.jpg",
-  "/images/DSCF3249%20.jpg",
+  "/images/DSCF3249_edited.jpg",
+  "/images/1452.jpg",
   "/images/WhatsApp%20Image%202026-05-15%20at%206.21.47%20PM_edited.jpeg"
 ];
 
@@ -477,7 +478,7 @@ function HomePage() {
                     <p className="stat-number" data-counter="96">
                       0
                     </p>
-                    <p className="stat-label">Client Satisfaction %</p>
+                    <p className="stat-label">Client Satisfaction</p>
                   </article>
                 </div>
               </div>

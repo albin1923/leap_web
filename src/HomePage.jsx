@@ -91,7 +91,7 @@ const heroImages = [
   "/images/DSCF3043_edited.jpg",
   "/images/DSCF3056_edited.jpg",
   "/images/DSCF3061_edited.jpg",
-  "/images/DSCF3069_edited.jpg",
+  "/images/DSCF3069_edited_v2.jpg",
   "/images/DSCF3083_edited.jpg",
   "/images/DSCF3139_edited.jpg",
   "/images/DSCF3161_edited.jpg",
